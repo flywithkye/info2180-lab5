@@ -13,20 +13,35 @@
 
 	<body>
 		<header>
-			<h1>World Database Lookup</h1>
+			<div id="headertitle">
+				<img id=icon src="pics/earth_icon.png" alt="">
+				<h1>World Database Lookup</h1>
+			</div>
 		</header>
 
-		<main>
+		<main id="maindiv">
 			<div id="controls">
-				<label for="country">Country:</label>
-				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup</button>
+				<div id="countrytitle"> 
+					<label for="country">Search for any Country:</label>					
+				</div>
+				<div id="countrysearch"> 
+					<input id="country" type="search" name="country" placeholder="Enter country name, e.g. Jamaica (leave empty to see all)" />
+					<button id="lookup">Lookup</button>		
+					<button id="lookupcity">Lookup Cities</button>	
+				</div>				
 			</div>
 			
 			<div id="result">
+				<div class="br"> </div>
+				<div id="results"> </div>   
 				<!-- countries will appear here -->
 			</div>
 		</main>
 
+		<footer>
+			<div class="container">
+				<p>Copyright &copy; 2023, Dayna Clare.</p>
+			</div>
+		</footer>
 	</body>
 </html>
