@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else if (reply.includes("<td>") == false){
                         resultsdiv.innerHTML = "";
 
-                        resultsdiv.innerHTML = "Please type the full name of a Country to search for Cities. 'Lookup' can provide assistance.";
+                        resultsdiv.innerHTML = "Please type the full name of a country to search for cities. 'Lookup' can provide assistance.";
                     
                     } else {
                         resultsdiv.innerHTML = "";                     
