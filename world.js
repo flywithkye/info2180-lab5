@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else if (reply.includes("<td>") == false){
                         resultsdiv.innerHTML = "";
 
-                        resultsdiv.innerHTML = "Country not found. Please try again.";
+                        resultsdiv.innerHTML = "No country matches found. Please try again.";
                     
                     } else {
                         resultsdiv.innerHTML = "";                     
