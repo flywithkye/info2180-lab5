@@ -13,11 +13,23 @@ if (empty($country)) {
 
   $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  echo "<ul>" . "\n";
+  echo "All Countries" . "\n";
+  echo "<table>" . "\n";
+  echo "<tr>" . "\n";
+  echo "<th>Country Name</th>" . "\n";
+  echo "<th>Continent</th>" . "\n";
+  echo "<th>Independence Year</th>" . "\n";
+  echo "<th>Head of State</th>" . "\n";
+  echo "</tr>" . "\n";
   foreach ($results as $row):
-    echo "<li>" . $row['name'] . ' is ruled by ' . $row['head_of_state'] . "</li>" . "\n";
+    echo "<tr>" . "\n";
+    echo  "<td>" . $row['name'] . "</td>";
+    echo  "<td>" . $row['continent'] . "</td>";
+    echo  "<td>" . $row['independence_year'] . "</td>";
+    echo  "<td>" . $row['head_of_state'] . "</td>";
+    echo "</tr>" . "\n";
   endforeach;
-  echo "</ul>";
+  echo "</table>";
 
 } else {
   $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
@@ -40,7 +52,7 @@ if (empty($country)) {
     echo  "<td>" . $row['head_of_state'] . "</td>";
     echo "</tr>" . "\n";
   endforeach;
-  echo "<table>";
+  echo "</table>";
 }
 
 

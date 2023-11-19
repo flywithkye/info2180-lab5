@@ -61,7 +61,7 @@ header {
 
 main {
     min-height: 300px;
-    width: 78%;
+    width: 75%;
     justify-content: center;
     align-items: center;
     background: var(--white_transparent);
@@ -81,6 +81,7 @@ main {
     display: flex;
     flex-direction: column;
     color: #0e0e0e;
+    width: 100%;
 }
 
 #controls label {
@@ -122,15 +123,14 @@ main {
 }
 
 #lookupcity {
-    width: 19%;
+    width: 24%;
     margin-right: -18px; 
 }
 
 #controls button{
     background: #321f1f;  
     border-radius: 2px;  
-	font: inherit;
-    font-size: 14px;
+    font-size: 13px;
     color: white;
     border: none;
 	outline: inherit;
@@ -197,8 +197,14 @@ table tbody td {
 footer {
     background: var(--black_transparent);
     color: white;
-    overflow-x: hidden;
+    bottom:0;
     width: 100vw;
+    justify-content: center;
+}
+
+footer .container {
     padding-top: 11px;
     padding-bottom: 3px;
+    bottom:0;
+    width: 80%;
 }

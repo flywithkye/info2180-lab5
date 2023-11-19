@@ -2,21 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const rqst = new XMLHttpRequest();
-    const trylookupbtn = document.getElementById('lookup');
+    const lookupbtn = document.getElementById('lookup');
     let countryfile = "world.php";
     let countryinput;
     let maindiv = document.getElementById('maindiv');
     let resultsdiv = document.getElementById('results');
-    let replyarr;
-    let temp;
-    let count;
     
-    console.log(trylookupbtn);    
+    console.log(lookupbtn);    
     console.log(resultsdiv);
     console.log(maindiv);
     
-    trylookupbtn.addEventListener('click', function(el){  
-        console.log("Test");
+    lookupbtn.addEventListener('click', function(el){  
         el.preventDefault();
 
         countryinput = document.getElementById('country').value;  
@@ -29,39 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     let reply = rqst.responseText;                     
                     console.log(reply);   
 
-                    if (reply.includes("<ul>")){
+                    if (reply.includes("All Countries")){
                         resultsdiv.innerHTML = "";
-                        maindiv.style.removeProperty("height"); 
-
-                        replyarr = reply.split(/\n/);
-                        console.log(replyarr); 
-
-                        replyarr.shift(); 
-                        replyarr.pop();
-
-                        replyarr.forEach((e, i) => {
-                            replyarr[i] = e.trim(); 
-                        });
-                        console.log(replyarr);  
-
-                        count = replyarr.length;
-
-                        console.log(count);
-                        console.log((350 + count) * 8.95);
                         
+                        reply = reply.replaceAll('All Countries', '');
+                        console.log(reply);  
+
                         resultsdiv.innerHTML = reply;
-                        maindiv.setAttribute("style","height:"+ ((350 + count) * 8.95) + "px");
                             
                         console.log(reply);
                         //alert(reply);
+
                     } else if (reply.includes("<td>") == false){
                         resultsdiv.innerHTML = "";
-                        maindiv.style.removeProperty("height"); 
 
                         resultsdiv.innerHTML = "Country not found. Please try again.";
                     } else {
-                        resultsdiv.innerHTML = "";
-                        maindiv.style.removeProperty("height");                      
+                        resultsdiv.innerHTML = "";                     
                         
                         resultsdiv.innerHTML = reply;
                         
