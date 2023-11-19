@@ -3,7 +3,7 @@
                         Arial, "Noto Sans", sans-serif;
     --white: #dfdfdf;
     --white_transparent: rgba(255, 255, 255, 0.75);
-    --black_transparent: rgb(44, 43, 43, 0.95);
+    --black_transparent: rgb(44, 43, 43, 0.955);
 }
 
 html {
@@ -60,7 +60,7 @@ header {
 }
 
 main {
-    min-height: 300px;
+    min-height: 250px;
     width: 75%;
     justify-content: center;
     align-items: center;
@@ -81,12 +81,13 @@ main {
     display: flex;
     flex-direction: column;
     color: #0e0e0e;
-    width: 100%;
+    flex: 1;
 }
 
 #controls label {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 17px;
+    flex: 1;
 }
 
 #countrytitle {
@@ -97,7 +98,7 @@ main {
     display: flex;
     margin-top: 2%;
     margin-bottom: 5%;
-    width: 100%;
+    flex: 1;
 }
 
 #controls input{
@@ -107,10 +108,10 @@ main {
     border-radius: 3px;
 	outline: inherit;
     padding: 10px;
-    width: 97%;
+    width: 100%;
     border: solid;
     border-width: 0.5px;
-    padding-left: 17px;
+    padding-left: 16px;
     margin-right: 15px;
 }
 
@@ -156,7 +157,7 @@ main {
 .br {
     border-bottom: 2px solid rgba(15, 15, 15, 0.2);
     margin-bottom: 30px;
-    width: 98%;
+    flex: 1;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -174,7 +175,7 @@ table th {
     font-size: 17px;
     padding: 9px;
     border: 1.3px solid #000000;
-    background-color: rgba(4, 51, 224, 0.6);
+    background-color: rgba(6, 52, 116, 0.55);
 }
 table thead td {
 	color: #ffffff;
